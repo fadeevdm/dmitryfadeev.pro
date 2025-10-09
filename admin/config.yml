@@ -2,14 +2,16 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "site/assets/gallery"
+# где хранятся загружаемые через CMS файлы (картинки и т.п.)
+media_folder: "assets/gallery"
 public_folder: "/assets/gallery"
 
 collections:
   - name: "content"
     label: "Контент"
+
     files:
-      - file: "site/assets/posts.json"
+      - file: "assets/posts.json"
         label: "Посты блога"
         name: "posts"
         format: "json"
@@ -17,6 +19,7 @@ collections:
           - label: "Посты"
             name: "posts"
             widget: "list"
+            summary: "{{fields.date}} • {{fields.ru.title}}"
             fields:
               - { label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
               - { label: "Обложка (cover)", name: "cover", widget: "image" }
@@ -39,7 +42,7 @@ collections:
                   - { label: "Excerpt", name: "excerpt", widget: "text" }
                   - { label: "Content", name: "content", widget: "text" }
 
-      - file: "site/assets/gallery.json"
+      - file: "assets/gallery.json"
         label: "Галерея"
         name: "gallery"
         format: "json"
