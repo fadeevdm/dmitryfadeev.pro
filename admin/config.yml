@@ -1,0 +1,62 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "site/assets/gallery"
+public_folder: "/assets/gallery"
+
+collections:
+  - name: "content"
+    label: "Контент"
+    files:
+      - file: "site/assets/posts.json"
+        label: "Посты блога"
+        name: "posts"
+        format: "json"
+        fields:
+          - label: "Посты"
+            name: "posts"
+            widget: "list"
+            fields:
+              - { label: "Дата", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Обложка (cover)", name: "cover", widget: "image" }
+              - label: "Изображения внутри поста"
+                name: "images"
+                widget: "list"
+                field: { label: "Изображение", name: "", widget: "image" }
+              - label: "RU"
+                name: "ru"
+                widget: "object"
+                fields:
+                  - { label: "Заголовок", name: "title", widget: "string" }
+                  - { label: "Кратко", name: "excerpt", widget: "text" }
+                  - { label: "Текст", name: "content", widget: "text" }
+              - label: "EN"
+                name: "en"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Excerpt", name: "excerpt", widget: "text" }
+                  - { label: "Content", name: "content", widget: "text" }
+
+      - file: "site/assets/gallery.json"
+        label: "Галерея"
+        name: "gallery"
+        format: "json"
+        fields:
+          - label: "Фото"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Thumb", name: "thumb", widget: "image" }
+              - { label: "Full", name: "src", widget: "image" }
+              - label: "RU"
+                name: "ru"
+                widget: "object"
+                fields:
+                  - { label: "Подпись", name: "caption", widget: "string" }
+              - label: "EN"
+                name: "en"
+                widget: "object"
+                fields:
+                  - { label: "Caption", name: "caption", widget: "string" }

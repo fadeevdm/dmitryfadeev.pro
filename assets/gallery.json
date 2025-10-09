@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "thumb": "assets/gallery/cover-1-thumb.jpg",
+      "src": "assets/gallery/cover-1.jpg",
+      "ru": {
+        "caption": "Диаграмма эффективности"
+      },
+      "en": {
+        "caption": "Performance chart"
+      }
+    }
+  ]
+}

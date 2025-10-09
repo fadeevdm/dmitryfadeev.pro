@@ -1,0 +1,21 @@
+{
+  "posts": [
+    {
+      "date": "2025-01-10",
+      "cover": "assets/gallery/cover-1.jpg",
+      "images": [
+        "assets/gallery/cover-1.jpg"
+      ],
+      "ru": {
+        "title": "Как снизить TDC без потери сервиса",
+        "excerpt": "Практические шаги.",
+        "content": "Текст поста RU."
+      },
+      "en": {
+        "title": "Lowering TDC without hurting service",
+        "excerpt": "Practical steps.",
+        "content": "Post text EN."
+      }
+    }
+  ]
+}
