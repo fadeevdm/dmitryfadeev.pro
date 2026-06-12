@@ -68,25 +68,25 @@
         <div class="expertise-text">
           <p data-i18n="expText1">Более 20 лет управления цепочками поставок, закупками и операционной деятельностью в ведущих международных компаниях (FMCG, Фармацевтика, E-commerce, Ритейл и Прямые продажи). Специализируюсь на создании устойчивых бизнес-моделей в условиях высокой неопределенности рынка.</p>
           <div class="certification-badge">
-            <strong>Международный стандарт:</strong> Сертифицирован APICS CSCP (Certified Supply Chain Professional) — золотой стандарт управления цепями поставок.
+            <strong data-i18n="certTitle">Международный стандарт:</strong> <span data-i18n="certDesc">Сертифицирован APICS CSCP (Certified Supply Chain Professional) — золотой стандарт управления цепями поставок.</span>
           </div>
         </div>
         <div class="stats-grid">
           <div class="stat-card">
-            <span class="stat-num">20+</span>
-            <span class="stat-desc">лет практического опыта</span>
+            <span class="stat-num" data-i18n="stat1Num">20+</span>
+            <span class="stat-desc" data-i18n="stat1Desc">лет практического опыта</span>
           </div>
           <div class="stat-card">
-            <span class="stat-num">OTIF</span>
-            <span class="stat-desc">вывод на целевой уровень 98%+</span>
+            <span class="stat-num" data-i18n="stat2Num">OTIF</span>
+            <span class="stat-desc" data-i18n="stat2Desc">вывод на целевой уровень 98%+</span>
           </div>
           <div class="stat-card">
-            <span class="stat-num">TDC</span>
-            <span class="stat-desc">оптимизация общих затрат</span>
+            <span class="stat-num" data-i18n="stat3Num">TDC</span>
+            <span class="stat-desc" data-i18n="stat3Desc">оптимизация общих затрат</span>
           </div>
           <div class="stat-card">
-            <span class="stat-num">S&amp;OP</span>
-            <span class="stat-desc">внедрение сквозного планирования</span>
+            <span class="stat-num" data-i18n="stat4Num">S&amp;OP</span>
+            <span class="stat-desc" data-i18n="stat4Desc">внедрение сквозного планирования</span>
           </div>
         </div>
       </div>
@@ -214,9 +214,4 @@
       document.body.classList.toggle('no-scroll', isOpened);
     };
     burger.addEventListener('click', () => toggleMenu());
-    navLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
-  }
-</script>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</body>
-</html>
+    navLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false
