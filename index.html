@@ -1,65 +1,223 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="ru" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dmitry Fadeev | Личный сайт</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Дмитрий Фадеев — Эксперт по цепочкам поставок | APICS CSCP</title>
+  <meta name="description" content="Профессиональный консалтинг в области Supply Chain, S&amp;OP и операционного менеджмента для крупного бизнеса.">
+  
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-    <!-- Шапка сайта -->
-    <header class="site-header">
-        <div class="header-container">
-            <!-- Логотип / Имя -->
-            <a href="#" class="logo-zone">
-                <div class="logo-square"></div>
-                <div class="logo-text">
-                    <span class="logo-name">Dmitry Fadeev</span>
-                    <span class="logo-sub">Expert Solutions</span>
-                </div>
-            </a>
-
-            <!-- Правая часть шапки: Языки + Гамбургер -->
-            <div class="header-actions">
-                <div class="lang-switcher">
-                    <a href="#ru" class="lang-link active">RU</a>
-                    <a href="#en" class="lang-link">EN</a>
-                </div>
-                
-                <button class="menu-toggle" id="menuOpenBtn" aria-label="Открыть меню">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Мобильное боковое меню (Overlay) -->
-    <div class="mobile-menu-overlay" id="mobileMenu">
-        <div class="mobile-menu-content">
-            <button class="menu-close" id="menuCloseBtn" aria-label="Закрыть меню">&times;</button>
-            
-            <nav class="mobile-nav">
-                <a href="#expertise" class="nav-item">Экспертиза</a>
-                <a href="#solutions" class="nav-item">Решения</a>
-                <a href="#practice" class="nav-item">Практика</a>
-                <a href="#about" class="nav-item">Обо мне</a>
-                <a href="#contacts" class="nav-item">Связаться</a>
-            </nav>
-            
-            <div class="mobile-menu-footer">
-                <a href="#contact" class="btn-discuss">Обсудить проект</a>
-            </div>
-        </div>
+<header class="header">
+  <div class="container header__row">
+    <div class="brand">
+      <img class="brand__logo" src="assets/images/favicon.svg" alt="Логотип" width="36" height="36">
+      <div class="brand__text">
+        <strong class="brand__name" data-i18n="brandName">Дмитрий Фадеев</strong>
+        <span class="brand__role">Supply Chain &amp; Operations Consulting</span>
+      </div>
     </div>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    
+    <nav id="nav" class="nav">
+      <div class="nav__links">
+        <a href="#expertise" data-i18n="navExpertise">Экспертиза</a>
+        <a href="#solutions" data-i18n="navSolutions">Решения</a>
+        <a href="#practice" data-i18n="navPractice">Практика</a>
+        <a href="#contact" class="btn btn--primary" data-i18n="navContact">Обсудить проект</a>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Language switch">
+        <button class="lang" data-lang="ru" aria-pressed="true">RU</button>
+        <button class="lang" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
 
-    <!-- Контент -->
-    <main class="main-content">
-        <!-- Сюда вставляй основной контент твоего сайта -->
-    </main>
+<main id="main">
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <div class="badge">APICS CSCP Certified</div>
+        <h1 data-i18n="heroTitle">Оптимизация цепочек поставок: рост эффективности и оборачиваемости капитала</h1>
+        <p class="lead" data-i18n="heroLead">Трансформирую операционные процессы, выстраиваю интегрированное планирование (S&amp;OP), снижаю совокупные затраты (TDC) и гарантирую рост целевых показателей OTIF.</p>
+        <div class="hero__actions">
+          <a href="#solutions" class="btn btn--accent" data-i18n="heroBtn">Посмотреть решения</a>
+          <a href="#expertise" class="btn" data-i18n="heroBtnSub">Узнать об опыте</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <img src="assets/images/photo.jpg" alt="Дмитрий Фадеев" class="photo small" loading="eager" width="420" height="420">
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="expertise" class="section">
+    <div class="container">
+      <h2 data-i18n="expTitle">Экспертиза и квалификация</h2>
+      <div class="expertise-grid">
+        <div class="expertise-text">
+          <p data-i18n="expText1">Более 20 лет управления цепочками поставок, закупками и операционной деятельностью в ведущих международных компаниях (FMCG, Фармацевтика, E-commerce, Ритейл и Прямые продажи). Специализируюсь на создании устойчивых бизнес-моделей в условиях высокой неопределенности рынка.</p>
+          <div class="certification-badge">
+            <strong data-i18n="certTitle">Международный стандарт:</strong> 
+            <span data-i18n="certDesc">Сертифицирован APICS CSCP (Certified Supply Chain Professional) — золотой стандарт управления цепями поставок.</span>
+          </div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-num" data-i18n="stat1Num">20+</span>
+            <span class="stat-desc" data-i18n="stat1Desc">лет практического опыта</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-i18n="stat2Num">OTIF</span>
+            <span class="stat-desc" data-i18n="stat2Desc">вывод на целевой уровень 98%+</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-i18n="stat3Num">TDC</span>
+            <span class="stat-desc" data-i18n="stat3Desc">опнизация общих затрат</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-i18n="stat4Num">S&amp;OP</span>
+            <span class="stat-desc" data-i18n="stat4Desc">внедрение сквозного планирования</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solutions" class="section alt">
+    <div class="container">
+      <h2 data-i18n="solutionsTitle">Стратегические решения</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">📊</span>
+            <h3 data-i18n="srv1Title">Диагностика и дорожная карта</h3>
+          </div>
+          <p class="card__text" data-i18n="srv1Desc">Комплексный аудит текущей цепи поставок, выявление «узких мест», оценка скрытых потерь и разработка пошаговой стратегии оптимизации процессов.</p>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">🔄</span>
+            <h3 data-i18n="srv2Title">Внедрение S&amp;OP</h3>
+          </div>
+          <p class="card__text" data-i18n="srv2Desc">Построение процесса интегрированного планирования продаж и операций. Синхронизация коммерции, финансов, производства и логистики для минимизации дефицита и затоваривания.</p>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">🚛</span>
+            <h3 data-i18n="srv3Title">Складская и транспортная логистика</h3>
+          </div>
+          <p class="card__text" data-i18n="srv3Desc">Оптимизация сетевой структуры, аудит складских процессов, внедрение WMS/TMS систем, реинжиниринг транспортных потоков и снижение стоимости мили.</p>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">📈</span>
+            <h3 data-i18n="srv4Title">Data, Управление запасами &amp; BI</h3>
+          </div>
+          <p class="card__text" data-i18n="srv4Desc">Разработка математических моделей управления запасами (ABC/XYZ анализ, категории AX), проектирование сквозной аналитики и дашбордов для контроля KPI.</p>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">🏢</span>
+            <h3 data-i18n="srv5Title">Операции компаний прямых продаж</h3>
+          </div>
+          <p class="card__text" data-i18n="srv5Desc">Специфический консалтинг для MLM и direct-selling моделей: управление высокими пиками заказов, оптимизация комплектации штучного отбора, управление клиентским сервисом.</p>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">🌍</span>
+            <h3 data-i18n="srv6Title">ВЭД и управление рисками</h3>
+          </div>
+          <p class="card__text" data-i18n="srv6Desc">Перепроектирование цепочек поставок в условиях санкций и ограничений, поиск альтернативных маршрутов, оптимизация таможенных процедур и работы с поставщиками.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="practice" class="section">
+    <div class="container">
+      <h2 data-i18n="practiceTitle">Публикации и практика</h2>
+      <div id="posts" class="cards blog-cards"></div>
+      
+      <div id="postModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="postTitle">
+        <div class="modal__dialog">
+          <button class="modal__close" aria-label="Закрыть">×</button>
+          <article id="postContent">
+            <h3 id="postTitle"></h3>
+            <p class="post-meta" id="postMeta"></p>
+            <div id="postBody"></div>
+            <section class="comments">
+              <h4 data-i18n="commentsTitle">Обсуждение публикации</h4>
+              <div id="giscus_container"></div>
+            </section>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="container">
+      <div class="cta-block">
+        <div class="cta-text">
+          <h2 data-i18n="contactTitle">Начать сотрудничество</h2>
+          <p data-i18n="contactDesc">Свяжитесь со мной для проведения первичного экспресс-анализа вашей цепочки поставок или обсуждения задач консалтинга.</p>
+        </div>
+        <address class="contacts-wrapper">
+          <ul class="contacts-list">
+            <li><a href="mailto:fadeevdm@gmail.com">✉️ fadeevdm@gmail.com</a></li>
+            <li><a href="https://t.me/dmitryfadeevpro" target="_blank" rel="noopener noreferrer">💬 <span data-i18n="contactTg">Написать в Telegram</span></a></li>
+            <li><a href="https://www.linkedin.com/in/dmitryfadeev/" target="_blank" rel="noopener noreferrer">🔗 <span data-i18n="contactLi">Профиль LinkedIn</span></a></li>
+          </ul>
+        </address>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__row-bot">
+    <span>© <span id="year">2026</span> <span data-i18n="footerCopy">Дмитрий Фадеев. Все права защищены.</span></span>
+    <span class="footer__note">APICS CSCP - Certified Supply Chain Professional</span>
+  </div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/blog.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const burger = document.querySelector('.burger');
+  const nav = document.getElementById('nav');
+  const navLinks = document.querySelectorAll('.nav__links a');
+
+  if (burger && nav) {
+    const toggleMenu = (state) => {
+      const isOpened = state !== undefined ? state : !nav.classList.contains('open');
+      nav.classList.toggle('open', isOpened);
+      burger.classList.toggle('open', isOpened); 
+      burger.setAttribute('aria-expanded', isOpened);
+      document.body.classList.toggle('no-scroll', isOpened);
+    };
+    burger.addEventListener('click', () => toggleMenu());
+    navLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+  }
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </body>
 </html>
