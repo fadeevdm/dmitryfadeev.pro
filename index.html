@@ -6,23 +6,7 @@
   <title>Дмитрий Фадеев — Эксперт по цепочкам поставок | APICS CSCP</title>
   <meta name="description" content="Профессиональный консалтинг в области Supply Chain, S&amp;OP и операционного менеджмента для крупного бизнеса.">
   
-  <!-- Open Graph / Facebook / LinkedIn -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dmitryfadeev.pro/">
-  <meta property="og:title" content="Дмитрий Фадеев — Консалтинг в Supply Chain">
-  <meta property="og:description" content="Оптимизация цепочек поставок, внедрение S&amp;OP, снижение TDC, повышение OTIF. 20+ лет опыта.">
-  <meta property="og:image" content="https://dmitryfadeev.pro/assets/images/photo.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://dmitryfadeev.pro/">
-  <meta property="twitter:title" content="Дмитрий Фадеев — Консалтинг в Supply Chain">
-  <meta property="twitter:description" content="Оптимизация цепочек поставок, внедрение S&amp;OP, снижение TDC, повышение OTIF. 20+ лет опыта.">
-  <meta property="twitter:image" content="https://dmitryfadeev.pro/assets/images/photo.jpg">
-
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  
-  <!-- Подключение премиального бизнес-шрифта Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -225,6 +209,7 @@
     const toggleMenu = (state) => {
       const isOpened = state !== undefined ? state : !nav.classList.contains('open');
       nav.classList.toggle('open', isOpened);
+      burger.classList.toggle('open', isOpened); 
       burger.setAttribute('aria-expanded', isOpened);
       document.body.classList.toggle('no-scroll', isOpened);
     };
