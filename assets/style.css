@@ -20,7 +20,7 @@
 html, body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden; /* Жесткая блокировка горизонтального скролла */
+  overflow-x: hidden; /* Блокировка горизонтального скролла */
   margin: 0;
   padding: 0;
   background-color: var(--bg);
@@ -31,7 +31,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Безопасное отключение скролла фона мобильного меню без прыжков экрана */
+/* Безопасное отключение скролла фона мобильного меню */
 body.no-scroll { 
   overflow: hidden; 
 }
@@ -61,7 +61,7 @@ a:hover { color: var(--brand); }
   width: 100%;
 }
 .header__row { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
-.brand { display: flex; align-items: center; gap: 12px; max-width: 50%; }
+.brand { display: flex; align-items: center; gap: 12px; max-width: 50%; min-width: 0; }
 .brand__logo { width: 34px; height: 34px; flex-shrink: 0; }
 .brand__text { min-width: 0; }
 .brand__name { display: block; font-size: 1.1rem; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -105,7 +105,7 @@ a:hover { color: var(--brand); }
 .btn--accent:hover { background: #34d399; border-color: #34d399; transform: translateY(-1px); }
 
 /* Переключатель языков */
-.lang-switch { display: flex; background: rgba(255,255,255,0.04); padding: 2px; border-radius: 6px; border: 1px solid var(--border); }
+.lang-switch { display: flex; background: rgba(255,255,255,0.04); padding: 2px; border-radius: 6px; border: 1px solid var(--border); flex-shrink: 0; }
 .lang { background: transparent; border: none; color: var(--muted); cursor: pointer; font-size: 0.75rem; font-weight: 700; padding: 4px 8px; border-radius: 4px; }
 .lang[aria-pressed="true"] { background: var(--panel); color: var(--brand); }
 
@@ -121,6 +121,7 @@ a:hover { color: var(--brand); }
   cursor: pointer; 
   padding: 0; 
   z-index: 101; 
+  flex-shrink: 0;
 }
 .burger span { width: 100%; height: 2px; background-color: #fff; transition: var(--transition); transform-origin: left center; }
 .burger.open span:nth-child(1) { transform: rotate(45deg) translateY(-2px); }
@@ -134,8 +135,29 @@ a:hover { color: var(--brand); }
 .hero h1 { font-size: clamp(26px, 4.2vw, 46px); font-weight: 800; line-height: 1.2; color: #fff; margin: 0 0 20px 0; letter-spacing: -0.02em; }
 .lead { font-size: 1.15rem; color: var(--muted); margin: 0 0 32px 0; }
 .hero__actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* Фотография в блоке Hero */
 .photo { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); }
-.photo.small { max-width: 380px; width: 100%; justify-self: center; }
+.photo.small {
+  max-width: 380px;
+  width: 100%;
+  justify-self: center;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  
+  /* Программная посадка фотографии в общую темную палитру сайта */
+  filter: contrast(1.05) brightness(0.95) saturate(0.95);
+  background-color: var(--panel);
+  transition: var(--transition);
+}
+
+/* Эффект легкого объема и свечения при наведении на Hero-блок */
+.hero:hover .photo.small {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(16, 185, 129, 0.05);
+}
 
 /* Общие секции */
 .section { padding: 96px 0; overflow: hidden; }
@@ -213,6 +235,17 @@ a:hover { color: var(--brand); }
   .section { padding: 64px 0; }
   .burger { display: flex; }
   
+  /* Корректируем пропорции шапки на планшетах, чтобы текст и меню не дрались за пиксели */
+  .brand {
+    max-width: 65%; /* Даем больше места под текстовый заголовок */
+    flex-shrink: 1;  /* Разрешаем названию бренда сжиматься */
+  }
+
+  .header__actions {
+    gap: 10px; /* Сужаем отступ между языками и бургером */
+    flex-shrink: 0; /* Запрещаем кнопкам меню сжиматься или переноситься */
+  }
+  
   /* Мобильное меню: выдвижная панель справа */
   .nav { 
     position: fixed; 
@@ -233,11 +266,14 @@ a:hover { color: var(--brand); }
   }
   .nav.open { right: 0; }
   
-  /* Увеличение области клика (Touch Targets) для удобства пальцев на ходу */
+  /* Увеличение области клика (Touch Targets) для мобильных пользователей */
   .nav__links { flex-direction: column; align-items: flex-start; gap: 16px; width: 100%; }
   .nav__links a { font-size: 1.1rem; width: 100%; display: block; padding: 12px 0; }
   .nav__links .btn { text-align: center; width: 100%; padding: 14px; margin-top: 4px; display: flex; }
   
+  .lang-switch { justify-content: center; width: auto; margin-top: 0; padding: 2px; }
+  .lang { flex: none; padding: 4px 8px; font-size: 0.75rem; }
+
   .footer__row-bot { flex-direction: column; text-align: center; gap: 8px; }
 }
 
@@ -260,8 +296,35 @@ a:hover { color: var(--brand); }
   .modal__dialog { padding: 32px 16px 24px 16px; }
   .cta-block { padding: 24px 16px; }
   
-  /* Аккуратный перенос контактов без жесткого разрыва слов */
+  /* Перенос контактов на узких экранах без поломки верстки */
   .contacts-list li a { font-size: 1rem; flex-wrap: wrap; justify-content: center; word-break: break-word; }
+
+  /* Жёсткие правила безопасности для заголовка на смартфонах */
+  .brand {
+    max-width: 60%;
+    gap: 8px; /* Немного прижимаем логотип к тексту */
+  }
+  
+  .brand__logo {
+    width: 30px;  /* Компактный логотип */
+    height: 30px;
+  }
+
+  .brand__name {
+    font-size: 0.95rem; /* Аккуратный размер шрифта для мобильных */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Защита: уходит в три точки в экстремальных условиях, не ломая шапку */
+  }
+
+  .brand__role {
+    font-size: 0.65rem; /* Компактное описание роли под именем */
+  }
+  
+  .lang {
+    padding: 4px 6px;
+    font-size: 0.7rem;
+  }
 }
 
 /* --- Микроанимация логотипа «Узлы сети» при наведении (Десктоп) --- */
@@ -290,6 +353,6 @@ a:hover { color: var(--brand); }
   }
   50% {
     r: 3.8;
-    fill: var(--accent); /* Мягкая вспышка стального синего цвета */
+    fill: var(--accent); /* Вспышка стального синего акцента */
   }
 }
