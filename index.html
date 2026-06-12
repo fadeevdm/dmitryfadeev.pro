@@ -43,13 +43,25 @@
 <header class="header">
   <div class="container header__row">
     <div class="brand">
-      <img class="brand__logo" src="assets/images/favicon.svg" alt="Логотип" width="36" height="36">
+      <svg class="brand__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
+        <rect width="36" height="36" rx="8" fill="url(#grad)" />
+        <path d="M12 14 L24 10 L20 24 Z" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+        <circle class="node-dot node-1" cx="12" cy="14" r="2.5" fill="#ffffff" />
+        <circle class="node-dot node-2" cx="24" cy="10" r="2.5" fill="#ffffff" />
+        <circle class="node-dot node-3" cx="20" cy="24" r="2.5" fill="#ffffff" />
+        <defs>
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#10b981" />
+            <stop offset="100%" stop-color="#059669" />
+          </linearGradient>
+        </defs>
+      </svg>
       <div class="brand__text">
         <strong class="brand__name" data-i18n="brandName">Дмитрий Фадеев</strong>
         <span class="brand__role">Supply Chain &amp; Operations Consulting</span>
       </div>
     </div>
-
+    
     <nav id="nav" class="nav">
       <div class="nav__links">
         <a href="#expertise" data-i18n="navExpertise">Экспертиза</a>
@@ -111,141 +123,4 @@
           </div>
           <div class="stat-card">
             <span class="stat-num" data-i18n="stat3Num">TDC</span>
-            <span class="stat-desc" data-i18n="stat3Desc">опнизация общих затрат</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num" data-i18n="stat4Num">S&amp;OP</span>
-            <span class="stat-desc" data-i18n="stat4Desc">внедрение сквозного планирования</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="solutions" class="section alt">
-    <div class="container">
-      <h2 data-i18n="solutionsTitle">Стратегические решения</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="card__header">
-            <span class="card__icon">📊</span>
-            <h3 data-i18n="srv1Title">Диагностика и дорожная карта</h3>
-          </div>
-          <p class="card__text" data-i18n="srv1Desc">Комплексный аудит текущей цепи поставок, выявление «узких мест», оценка скрытых потерь и разработка пошаговой стратегии оптимизации процессов.</p>
-        </article>
-
-        <article class="card">
-          <div class="card__header">
-            <span class="card__icon">🔄</span>
-            <h3 data-i18n="srv2Title">Внедрение S&amp;OP</h3>
-          </div>
-          <p class="card__text" data-i18n="srv2Desc">Построение процесса интегрированного планирования продаж и операций. Синхронизация коммерции, финансов, производства и логистики для минимизации дефицита и затоваривания.</p>
-        </article>
-
-        <article class="card">
-          <div class="card__header">
-            <span class="card__icon">🚛</span>
-            <h3 data-i18n="srv3Title">Складская и транспортная логистика</h3>
-          </div>
-          <p class="card__text" data-i18n="srv3Desc">Оптимизация сетевой структуры, аудит складских процессов, внедрение WMS/TMS систем, реинжиниринг транспортных потоков и снижение стоимости мили.</p>
-        </article>
-
-        <article class="card">
-          <div class="card__header">
-            <span class="card__icon">📈</span>
-            <h3 data-i18n="srv4Title">Data, Управление запасами &amp; BI</h3>
-          </div>
-          <p class="card__text" data-i18n="srv4Desc">Разработка математических моделей управления запасами (ABC/XYZ анализ, категории AX), проектирование сквозной аналитики и дашбордов для контроля KPI.</p>
-        </article>
-
-        <article class="card">
-          <div class="card__header">
-            <span class="card__icon">🏢</span>
-            <h3 data-i18n="srv5Title">Операции компаний прямых продаж</h3>
-          </div>
-          <p class="card__text" data-i18n="srv5Desc">Специфический консалтинг для MLM и direct-selling моделей: управление высокими пиками заказов, оптимизация комплектации штучного отбора, управление клиентским сервисом.</p>
-        </article>
-
-        <article class="card">
-          <div class="card__header">
-            <span class="card__icon">🌍</span>
-            <h3 data-i18n="srv6Title">ВЭД и управление рисками</h3>
-          </div>
-          <p class="card__text" data-i18n="srv6Desc">Перепроектирование цепочек поставок в условиях санкций и ограничений, поиск альтернативных маршрутов, оптимизация таможенных процедур и работы с поставщиками.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="practice" class="section">
-    <div class="container">
-      <h2 data-i18n="practiceTitle">Публикации и практика</h2>
-      <div id="posts" class="cards blog-cards"></div>
-      
-      <div id="postModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="postTitle">
-        <div class="modal__dialog">
-          <button class="modal__close" aria-label="Закрыть">×</button>
-          <article id="postContent">
-            <h3 id="postTitle"></h3>
-            <p class="post-meta" id="postMeta"></p>
-            <div id="postBody"></div>
-            <section class="comments">
-              <h4 data-i18n="commentsTitle">Обсуждение публикации</h4>
-              <div id="giscus_container"></div>
-            </section>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section alt">
-    <div class="container">
-      <div class="cta-block">
-        <div class="cta-text">
-          <h2 data-i18n="contactTitle">Начать сотрудничество</h2>
-          <p data-i18n="contactDesc">Свяжитесь со мной для проведения первичного экспресс-анализа вашей цепочки поставок или обсуждения задач консалтинга.</p>
-        </div>
-        <address class="contacts-wrapper">
-          <ul class="contacts-list">
-            <li><a href="mailto:fadeevdm@gmail.com">✉️ fadeevdm@gmail.com</a></li>
-            <li><a href="https://t.me/dmitryfadeevpro" target="_blank" rel="noopener noreferrer">💬 <span data-i18n="contactTg">Написать в Telegram</span></a></li>
-            <li><a href="https://www.linkedin.com/in/dmitryfadeev/" target="_blank" rel="noopener noreferrer">🔗 <span data-i18n="contactLi">Профиль LinkedIn</span></a></li>
-          </ul>
-        </address>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container footer__row-bot">
-    <span>© <span id="year">2026</span> <span data-i18n="footerCopy">Дмитрий Фадеев. Все права защищены.</span></span>
-    <span class="footer__note">APICS CSCP - Certified Supply Chain Professional</span>
-  </div>
-</footer>
-
-<script src="assets/i18n.js"></script>
-<script src="assets/blog.js"></script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const burger = document.querySelector('.burger');
-  const nav = document.getElementById('nav');
-  const navLinks = document.querySelectorAll('.nav__links a');
-
-  if (burger && nav) {
-    const toggleMenu = (state) => {
-      const isOpened = state !== undefined ? state : !nav.classList.contains('open');
-      nav.classList.toggle('open', isOpened);
-      burger.classList.toggle('open', isOpened); 
-      burger.setAttribute('aria-expanded', isOpened);
-      document.body.classList.toggle('no-scroll', isOpened);
-    };
-    burger.addEventListener('click', () => toggleMenu());
-    navLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
-  }
-</script>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</body>
-</html>
+            <span class="
