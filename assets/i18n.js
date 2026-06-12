@@ -57,7 +57,7 @@ const translations = {
     heroTitle: "Supply Chain Optimization: Driving Efficiency & Capital Turnover",
     heroLead: "Transforming operational processes, establishing Integrated Business Planning (S&OP), reducing Total Delivered Cost (TDC), and driving sustainable growth in OTIF metrics.",
     heroBtn: "View Solutions",
-    heroBtnSub: "Our Experience",
+    heroBtnSub: "My Experience",
     
     expTitle: "Expertise & Qualifications",
     expText1: "Over 20 years of hands-on experience in supply chain management, procurement, and operations across leading international companies (FMCG, Pharma, E-commerce, Retail, and Direct Selling). Specializing in building resilient business models under high market uncertainty.",
