@@ -193,4 +193,43 @@
         <address class="contacts-wrapper">
           <ul class="contacts-list">
             <li><a href="mailto:fadeevdm@gmail.com">✉️ fadeevdm@gmail.com</a></li>
-            <li><a href="https://t.me/dmitryfadeevpro" target="_blank" rel="noopener noreferrer"><span data-i18n="contactTg">💬 Написать в Telegram
+            <li><a href="https://t.me/dmitryfadeevpro" target="_blank" rel="noopener noreferrer"><span data-i18n="contactTg">💬 Написать в Telegram</span></a></li>
+            <li><a href="https://www.linkedin.com/in/dmitryfadeev/" target="_blank" rel="noopener noreferrer"><span data-i18n="contactLi">🔗 Профиль LinkedIn</span></a></li>
+          </ul>
+        </address>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__row-bot">
+    <span>© <span id="year">2026</span> <span data-i18n="footerCopy">Дмитрий Фадеев. Все права защищены.</span></span>
+    <span class="footer__note">APICS CSCP - Certified Supply Chain Professional</span>
+  </div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/blog.js"></script>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const burger = document.querySelector('.burger');
+  const nav = document.getElementById('nav');
+  const navLinks = document.querySelectorAll('.nav__links a');
+
+  if (burger && nav) {
+    const toggleMenu = (state) => {
+      const isOpened = state !== undefined ? state : !nav.classList.contains('open');
+      nav.classList.toggle('open', isOpened);
+      burger.setAttribute('aria-expanded', isOpened);
+      document.body.classList.toggle('no-scroll', isOpened);
+    };
+    burger.addEventListener('click', () => toggleMenu());
+    navLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+  }
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html>
