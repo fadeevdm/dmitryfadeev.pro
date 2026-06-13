@@ -192,3 +192,9 @@ a:hover { color: var(--brand); }
   opacity: 1;
   visibility: visible;
 }
+/* Компактные отступы для очень узких экранов */
+@media (max-width: 400px) {
+  .header__controls { gap: 8px; }
+  .lang { padding: 8px 10px; }
+  .brand__name { font-size: 1rem; }
+}
