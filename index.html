@@ -2,36 +2,27 @@
 <html lang="ru" data-theme="dark">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Дмитрий Фадеев — Эксперт по цепочкам поставок | APICS CSCP</title>
   <meta name="description" content="Профессиональный консалтинг в области Supply Chain, S&amp;OP и операционного менеджмента для крупного бизнеса.">
   
+  <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Дмитрий Фадеев — Эксперт по цепочкам поставок | APICS CSCP">
-  <meta property="og:description" content="Профессиональный консалтинг в области Supply Chain, S&amp;OP и операционного менеджмента для крупного бизнеса.">
-  <meta property="og:url" content="https://dmitryfadeev.pro">
+  <meta property="og:url" content="https://dmitryfadeev.pro/">
+  <meta property="og:title" content="Дмитрий Фадеев — Консалтинг в Supply Chain">
+  <meta property="og:description" content="Оптимизация цепочек поставок, внедрение S&amp;OP, снижение TDC, повышение OTIF. 20+ лет опыта.">
   <meta property="og:image" content="https://dmitryfadeev.pro/assets/images/photo.jpg">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Дмитрий Фадеев",
-    "jobTitle": "Supply Chain & Operations Consultant",
-    "url": "https://dmitryfadeev.pro",
-    "sameAs": [
-      "https://www.linkedin.com/in/dmitryfadeev/",
-      "https://t.me/dmitryfadeevpro"
-    ],
-    "hasCredential": {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "Certification",
-      "name": "APICS CSCP (Certified Supply Chain Professional)"
-    }
-  }
-  </script>
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://dmitryfadeev.pro/">
+  <meta property="twitter:title" content="Дмитрий Фадеев — Консалтинг в Supply Chain">
+  <meta property="twitter:description" content="Оптимизация цепочек поставок, внедрение S&amp;OP, снижение TDC, повышение OTIF. 20+ лет опыта.">
+  <meta property="twitter:image" content="https://dmitryfadeev.pro/assets/images/photo.jpg">
 
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  
+  <!-- Подключение премиального бизнес-шрифта Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -43,24 +34,15 @@
 <header class="header">
   <div class="container header__row">
     <div class="brand">
-      <svg class="brand__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
-        <rect width="36" height="36" rx="8" fill="url(#grad)" />
-        <path d="M12 14 L24 10 L20 24 Z" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
-        <circle class="node-dot node-1" cx="12" cy="14" r="2.5" fill="#ffffff" />
-        <circle class="node-dot node-2" cx="24" cy="10" r="2.5" fill="#ffffff" />
-        <circle class="node-dot node-3" cx="20" cy="24" r="2.5" fill="#ffffff" />
-        <defs>
-          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#10b981" />
-            <stop offset="100%" stop-color="#059669" />
-          </linearGradient>
-        </defs>
-      </svg>
+      <img class="brand__logo" src="assets/images/favicon.svg" alt="Логотип" width="36" height="36">
       <div class="brand__text">
         <strong class="brand__name" data-i18n="brandName">Дмитрий Фадеев</strong>
         <span class="brand__role">Supply Chain &amp; Operations Consulting</span>
       </div>
     </div>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
     
     <nav id="nav" class="nav">
       <div class="nav__links">
@@ -69,17 +51,11 @@
         <a href="#practice" data-i18n="navPractice">Практика</a>
         <a href="#contact" class="btn btn--primary" data-i18n="navContact">Обсудить проект</a>
       </div>
-    </nav>
-
-    <div class="header__actions">
       <div class="lang-switch" role="group" aria-label="Language switch">
         <button class="lang" data-lang="ru" aria-pressed="true">RU</button>
         <button class="lang" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    </nav>
   </div>
 </header>
 
@@ -96,4 +72,166 @@
         </div>
       </div>
       <div class="hero__media">
-        <img src="assets/images/photo.jpg" alt="Дмитрий Фадеев" class="photo small" loading="eager" width="4
+        <img src="assets/images/photo.jpg" alt="Дмитрий Фадеев" class="photo small" loading="eager" width="420" height="420">
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise" class="section">
+    <div class="container">
+      <h2 data-i18n="expTitle">Экспертиза и квалификация</h2>
+      <div class="expertise-grid">
+        <div class="expertise-text">
+          <p data-i18n="expText1">Более 20 лет управления цепочками поставок, закупками и операционной деятельностью в ведущих международных компаниях (FMCG, Фармацевтика, E-commerce, Ритейл и Прямые продажи). Специализируюсь на создании устойчивых бизнес-моделей в условиях высокой неопределенности рынка.</p>
+          <div class="certification-badge">
+            <strong>Международный стандарт:</strong> Сертифицирован APICS CSCP (Certified Supply Chain Professional) — золотой стандарт управления цепями поставок.
+          </div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-num">20+</span>
+            <span class="stat-desc">лет практического опыта</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">OTIF</span>
+            <span class="stat-desc">вывод на целевой уровень 98%+</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">TDC</span>
+            <span class="stat-desc">оптимизация общих затрат</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">S&amp;OP</span>
+            <span class="stat-desc">внедрение сквозного планирования</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solutions" class="section alt">
+    <div class="container">
+      <h2 data-i18n="solutionsTitle">Стратегические решения</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">📊</span>
+            <h3>Диагностика и дорожная карта</h3>
+          </div>
+          <p class="card__text">Комплексный аудит текущей цепи поставок, выявление «узких мест», оценка скрытых потерь и разработка пошаговой стратегии оптимизации процессов.</p>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">🔄</span>
+            <h3>Внедрение S&amp;OP</h3>
+          </div>
+          <p class="card__text">Построение процесса интегрированного планирования продаж и операций. Синхронизация коммерции, финансов, производства и логистики для минимизации дефицита и затоваривания.</p>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">🚛</span>
+            <h3>Складская и транспортная логистика</h3>
+          </div>
+          <p class="card__text">Оптимизация сетевой структуры, аудит складских процессов, внедрение WMS/TMS систем, реинжиниринг транспортных потоков и снижение стоимости мили.</p>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">📈</span>
+            <h3>Data, Управление запасами &amp; BI</h3>
+          </div>
+          <p class="card__text">Разработка математических моделей управления запасами (ABC/XYZ анализ, категории AX), проектирование сквозной аналитики и дашбордов для контроля KPI.</p>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">🏢</span>
+            <h3>Операции компаний прямых продаж</h3>
+          </div>
+          <p class="card__text">Специфический консалтинг для MLM и direct-selling моделей: управление высокими пиками заказов, оптимизация комплектации штучного отбора, управление клиентским сервисом.</p>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <span class="card__icon">🌍</span>
+            <h3>ВЭД и управление рисками</h3>
+          </div>
+          <p class="card__text">Перепроектирование цепочек поставок в условиях санкций и ограничений, поиск альтернативных маршрутов, оптимизация таможенных процедур и работы с поставщиками.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="practice" class="section">
+    <div class="container">
+      <h2 data-i18n="practiceTitle">Публикации и практика</h2>
+      <div id="posts" class="cards blog-cards"></div>
+      
+      <div id="postModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="postTitle">
+        <div class="modal__dialog">
+          <button class="modal__close" aria-label="Закрыть">×</button>
+          <article id="postContent">
+            <h3 id="postTitle"></h3>
+            <p class="post-meta" id="postMeta"></p>
+            <div id="postBody"></div>
+            <section class="comments">
+              <h4 data-i18n="commentsTitle">Обсуждение публикации</h4>
+              <div id="giscus_container"></div>
+            </section>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="container">
+      <div class="cta-block">
+        <div class="cta-text">
+          <h2 data-i18n="contactTitle">Начать сотрудничество</h2>
+          <p>Свяжитесь со мной для проведения первичного экспресс-анализа вашей цепочки поставок или обсуждения задач консалтинга.</p>
+        </div>
+        <address class="contacts-wrapper">
+          <ul class="contacts-list">
+            <li><a href="mailto:fadeevdm@gmail.com">✉️ fadeevdm@gmail.com</a></li>
+            <li><a href="https://t.me/dmitryfadeevpro" target="_blank" rel="noopener noreferrer">💬 Написать в Telegram</a></li>
+            <li><a href="https://www.linkedin.com/in/dmitryfadeev/" target="_blank" rel="noopener noreferrer">🔗 Профиль LinkedIn</a></li>
+          </ul>
+        </address>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__row-bot">
+    <span>© <span id="year">2026</span> Дмитрий Фадеев. Все права защищены.</span>
+    <span class="footer__note">APICS CSCP - Certified Supply Chain Professional</span>
+  </div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/blog.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const burger = document.querySelector('.burger');
+  const nav = document.getElementById('nav');
+  const navLinks = document.querySelectorAll('.nav__links a');
+
+  if (burger && nav) {
+    const toggleMenu = (state) => {
+      const isOpened = state !== undefined ? state : !nav.classList.contains('open');
+      nav.classList.toggle('open', isOpened);
+      burger.setAttribute('aria-expanded', isOpened);
+      document.body.classList.toggle('no-scroll', isOpened);
+    };
+    burger.addEventListener('click', () => toggleMenu());
+    navLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+  }
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</body>
+</html>
