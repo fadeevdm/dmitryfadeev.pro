@@ -31,15 +31,11 @@
 <header class="header">
   <div class="container header__row">
     <div class="brand">
-      <img class="brand__logo" src="assets/images/favicon.svg" alt="Логотип" width="36" height="36">
       <div class="brand__text">
         <strong class="brand__name" data-i18n="brandName">Дмитрий Фадеев</strong>
         <span class="brand__role">Supply Chain &amp; Operations Consulting</span>
       </div>
     </div>
-    <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
-      <span></span><span></span><span></span>
-    </button>
     
     <nav id="nav" class="nav">
       <div class="nav__links">
@@ -48,11 +44,17 @@
         <a href="#practice" data-i18n="navPractice">Практика</a>
         <a href="#contact" class="btn btn--primary" data-i18n="navContact">Обсудить проект</a>
       </div>
+    </nav>
+
+    <div class="header__controls">
       <div class="lang-switch" role="group" aria-label="Language switch">
         <button class="lang" data-lang="ru" aria-pressed="true">RU</button>
         <button class="lang" data-lang="en" aria-pressed="false">EN</button>
       </div>
-    </nav>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
