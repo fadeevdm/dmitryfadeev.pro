@@ -3,8 +3,8 @@ backend:
   branch: main
 
 # Где хранятся загружаемые через CMS файлы (картинки, обложки постов и т.п.)
-media_folder: "assets/gallery"
-public_folder: "/assets/gallery"
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
   - name: "content"
@@ -42,25 +42,3 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Excerpt", name: "excerpt", widget: "text" }
                   - { label: "Content", name: "content", widget: "markdown" } # Изменено на markdown
-
-      - file: "assets/gallery.json"
-        label: "Галерея"
-        name: "gallery"
-        format: "json"
-        fields:
-          - label: "Фото"
-            name: "items"
-            widget: "list"
-            fields:
-              - { label: "Thumb", name: "thumb", widget: "image" }
-              - { label: "Full", name: "src", widget: "image" }
-              - label: "RU"
-                name: "ru"
-                widget: "object"
-                fields:
-                  - { label: "Подпись", name: "caption", widget: "string", required: false }
-              - label: "EN"
-                name: "en"
-                widget: "object"
-                fields:
-                  - { label: "Caption", name: "caption", widget: "string", required: false }
